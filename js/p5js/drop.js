@@ -50,8 +50,6 @@ class Drop {
 
 class WobblyPointer {
     constructor() {
-        // this.pos = createVector(mouseX, mouseY);
-        // this.size = deflectRadius;
         this.color = random([primaryColorFaded, primaryColor2Faded]);
         this.nodes = 100;
         this.r = deflectRadius*1.8;
