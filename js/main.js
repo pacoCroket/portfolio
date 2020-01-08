@@ -21,12 +21,12 @@ $(document).ready(function(){
         return false;
     });
 
-    // don't show p5.js if device is smaller than 600px width
-    if($(window).width() < 600) {
-        $("#p5js-sketch").remove();
-    } else {
-        // setHeight($(window).width()-nav_offset_top)
-    }
+    // // don't show p5.js if device is smaller than 600px width
+    // if($(window).width() < 600) {
+    //     $("#p5js-sketch").remove();
+    // } else {
+    //     // setHeight($(window).width()-nav_offset_top)
+    // }
 
     // sticky navigation menu
 
