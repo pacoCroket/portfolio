@@ -18,6 +18,10 @@
 /* if the viewport <= 792px  */
 @media only screen and (max-width: 792px){
 
+    .site-main .swimlane {
+        background: var(--swimlane-unpadded-color);
+    }
+
     .header-area .main-menu .navbar,
     .header-area .main-menu .navbar .navbar-brand {  
         padding: 0%;        

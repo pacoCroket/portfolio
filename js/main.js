@@ -30,20 +30,20 @@ $(document).ready(function(){
 
     // sticky navigation menu
 
-    function navbarFixed() {
-        if ($('.header-area').length) {
-            $(window).scroll(function() {
-                let scroll = $(window).scrollTop();
-                if (scroll >= nav_offset_top+50) {
-                    $('.header-area .main-menu').addClass('navbar-fixed');
-                } else {
-                    $('.header-area .main-menu').removeClass('navbar-fixed');
-                }
-            });
-        }
-    }
+    // function navbarFixed() {
+    //     if ($('.header-area').length) {
+    //         $(window).scroll(function() {
+    //             let scroll = $(window).scrollTop();
+    //             if (scroll >= nav_offset_top+50) {
+    //                 $('.header-area .main-menu').addClass('navbar-fixed');
+    //             } else {
+    //                 $('.header-area .main-menu').removeClass('navbar-fixed');
+    //             }
+    //         });
+    //     }
+    // }
 
-    navbarFixed();
+    // navbarFixed();
 
     // $('.site-main .p5js-sketch').attr('height', nav_offset_top-150);
 
