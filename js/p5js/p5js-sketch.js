@@ -18,7 +18,6 @@ function setup() {
     theta = PI / 3;
     edgeColor = color(0, 200, 0);
     ship = new Ship();
-
 }
 
 function draw() {
