@@ -41,6 +41,9 @@
     width: 101%;
     height: 100%;
 }
+.rain-drop {
+    color: var(--primary-color);
+}
 
 /* end p5js sketch */
 
