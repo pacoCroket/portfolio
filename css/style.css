@@ -75,8 +75,9 @@
     font-size: 5rem;
 }
 
-.site-main .site-banner .site-title h4 {
-    font-size: 1.5rem;
+.site-main .site-banner .site-title h4 {    
+    font: normal bold 1.8rem/3rem var(--roboto);
+    letter-spacing: 2px;
 }
 
 .site-main .site-banner .banner-image > img {
@@ -152,7 +153,7 @@
 
 footer.footer-area {
     padding: 2rem 0;
-    background-color: #BBBBBB;
+    background-color: rgb(207, 207, 207);
 }
 
 footer.footer-area .social h5 {
@@ -186,11 +187,17 @@ footer.footer-area .social a:hover > i{
     /* Buttons */
     
     .button {
-        padding: .8rem 2.2rem;
+        padding: .8rem 2rem;
         font: normal 500 16px/20px var(--roboto);
         position: relative;
         border: 3px solid transparent;
-        border-radius: 4px;
+        border-radius: 8px;
+    }
+
+    .button-small {
+        margin: 0 1rem;
+        padding: .4rem 0.8rem;
+        font: normal 500 14px/16px var(--roboto);
     }
     
     .button.primary-button {
@@ -214,7 +221,7 @@ footer.footer-area .social a:hover > i{
         background: var(--gradient-color);
         content: '';
         z-index: -1;
-        border-radius: 4px;
+        border-radius: 8px;
     }
     
     .button.secondary-button {
@@ -228,10 +235,18 @@ footer.footer-area .social a:hover > i{
         color: whitesmoke;
         box-shadow: var(--box-shadow);
     }
+
+    .paragraph {
+        width: 75%;
+    }
     
     p.para {
         color: var(--text-color);
         font: normal 500 18px/25px var(--roboto);
+    }
+
+    p.para.justify {        
+        text-align: justify;
     }
     
     button:focus,
@@ -252,7 +267,7 @@ footer.footer-area .social a:hover > i{
         width: 100%;
         top: -4px;
         left: 0; right: 0;
-        background: whitesmoke;
+        background: white;
         z-index: 999;
         transition: background .5s ease;
     }
@@ -280,7 +295,7 @@ footer.footer-area .social a:hover > i{
         --primary-color: rgb(50, 40, 187);
         --primary-color2: #33c0a9;
         --title-color: #141313;
-        --text-color: #777777;  
+        --text-color: #555555;  
         --border-color: #201f1f17;  
         --gradient-color: linear-gradient(90deg, #38ad94 0%, #2623b1 100%);
         --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);

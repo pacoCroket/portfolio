@@ -6,6 +6,8 @@ var mousePos;
 var lerpAmtRate = 0.018;
 var wobblyPointers = [];
 var pointers = 4;
+var toggleBtn;
+var animationOn = true;
 
 // colors
 var primaryColor;
@@ -23,6 +25,8 @@ function setup(){
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.parent("p5js-sketch");
+    toggleBtn = select('#animationToggle');
+    toggleBtn.mousePressed(toggleAnimation);
     
     strokeCap(ROUND);
     deflectRadius = windowHeight*0.2;
@@ -39,7 +43,6 @@ function setup(){
 }
 
 function draw() {
-    // background(120);
     // transparent background
     clear();
     mousePos = createVector(mouseX, mouseY);
@@ -56,7 +59,7 @@ function draw() {
         if (drops[i].isOut()) {drops.splice(i, 1); continue;}
 
         // if near mouse
-        if (p5.Vector.sub(drops[i].pos, mousePos).mag() < deflectRadius) {
+        if (animationOn && p5.Vector.sub(drops[i].pos, mousePos).mag() < deflectRadius) {
             // deflect
             // drops[i].defeflect(mousePos);
             // change class
@@ -79,4 +82,23 @@ function draw() {
         wobblyPointers[i].shift();
     }
 
+}
+
+function toggleAnimation() {
+    animationOn = !animationOn;
+
+    if (!animationOn) {
+        dropLimit = 0;
+        wobblyPointers = [];
+    } else {
+        resetElements();
+    }
+}
+
+function resetElements() {    
+    dropLimit = width/15;
+
+    for (var i = 0; i < pointers; i++) {
+        wobblyPointers.push(new WobblyPointer());
+    }
 }

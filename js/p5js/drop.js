@@ -2,12 +2,12 @@
 class Drop {
     constructor(){
         this.pos = createVector(random(width), 0);
-        this._vel = createVector(0, random(2,6));
+        this._vel = createVector(0, random(2,5));
         this.vel = this._vel;
         // this.speed = random(2,4);
-        this._color = color(0, random(255));
+        this._color = color(30, random(220));
         this.color = this._color;
-        this._weight = random(2, 8);
+        this._weight = map(this._vel.y, 2, 5, 10, 1);
         this.weight = this._weight;
         this.radioactive = false;
         this.radioactiveColor = random([primaryColor, primaryColor2]);
@@ -21,7 +21,7 @@ class Drop {
     }
 
     isOut() {
-        return this.pos.y + this.vel.y*this.vel.y > windowHeight || this.pos.x + this.vel.x*this.vel.x > windowWidth;
+        return this.pos.y > windowHeight + this.vel.y*this.vel.y + 20;
     }
 
     move() {
@@ -31,7 +31,7 @@ class Drop {
     show() {
         stroke(this.color);
         strokeWeight(this.weight);
-        line(this.pos.x, this.pos.y, this.pos.x-this.vel.x*this.vel.x, this.pos.y-this.vel.y*this.vel.y);
+        line(this.pos.x, this.pos.y, this.pos.x-this.vel.x*this.vel.x, this.pos.y-this.vel.y*this.vel.y*2);
     }
 
     lerp() {
@@ -43,7 +43,7 @@ class Drop {
         this.lerpAmt = constrain(this.lerpAmt, 0, 1);
 
         this.color = lerpColor(this._color, this.radioactiveColor, this.lerpAmt);
-        this.vel = p5.Vector.lerp(this._vel, p5.Vector.mult(this._vel, 0.2), this.lerpAmt);
+        this.vel = p5.Vector.lerp(this._vel, p5.Vector.mult(this._vel, 0.25), this.lerpAmt);
         this.weight = lerp(this._weight, pow(this._weight, 1.5), this.lerpAmt);
     }
 }
@@ -60,10 +60,11 @@ class WobblyPointer {
         this.spikes = floor(random(6, 15));
         this.breath = random(0, 0.05);
         this.deltat = random(0.02, 0.1);
+        this.sign = random([1, -1]);
     }
 
     shift() {
-        this.toff += this.deltat;
+        this.toff += this.sign*this.deltat;
     }
 
     show() {

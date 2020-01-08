@@ -36,12 +36,20 @@
         letter-spacing: 10px;
     }
 
+    .site-main .about-area .paragraph {
+        width: 100%;
+    }
+
     .site-main .project-area .button-group button{
         font: normal 500 18px/40px var(--roboto);
     }
 
     .site-main .about-area .about-title p{
         padding: 0%;
+    }
+
+    footer.footer-area .social a > i{
+        padding: 2rem 1rem;
     }
 }
 
