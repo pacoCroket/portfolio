@@ -3,7 +3,7 @@ var drops = [];
 var dropLimit;
 var deflectRadius;
 var mousePos;
-var lerpAmtRate = 0.015;
+var lerpAmtRate = 0.018;
 var wobblyPointers = [];
 var pointers = 4;
 

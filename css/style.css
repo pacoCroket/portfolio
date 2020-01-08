@@ -52,12 +52,12 @@
 .site-main .site-banner {
     /* background: url(./img/Paco-02.jpg) no-repeat; TODO */
     background-position: 0% 50%;
-    padding: 4rem 8rem;
+    padding: 4rem 4rem;
 }
 
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 20%;
     font-weight: 500;
 }
 
@@ -98,11 +98,11 @@
 .site-main .about-area .about-title h2 > span {
     display: block;
     font: normal bold 49px/60px var(--roboto);
-    letter-spacing: 21px;
+    letter-spacing: 15px;
 }
 
 .site-main .about-area .about-title .paragraph > p {
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 
 /* end about area */
@@ -231,7 +231,7 @@ footer.footer-area .social a:hover > i{
     
     p.para {
         color: var(--text-color);
-        font: normal 500 16px/25px var(--roboto);
+        font: normal 500 18px/25px var(--roboto);
     }
     
     button:focus,
