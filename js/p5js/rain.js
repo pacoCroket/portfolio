@@ -3,9 +3,15 @@ var drops = [];
 var dropLimit;
 var deflectRadius;
 var mousePos;
-var lerpAmtRate = 0.02;
+var lerpAmtRate = 0.015;
+var wobblyPointers = [];
+var pointers = 4;
+
+// colors
 var primaryColor;
 var primaryColor2;
+var primaryColorFaded;
+var primaryColor2Faded;
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
@@ -24,6 +30,12 @@ function setup(){
     
     primaryColor = color(50, 40, 187);
     primaryColor2 = color('#33c0a9');
+    primaryColorFaded = color(50, 40, 187, 50);
+    primaryColor2Faded = color('#33c0a944');
+
+    for (var i = 0; i < pointers; i++) {
+        wobblyPointers.push(new WobblyPointer());
+    }
 }
 
 function draw() {
@@ -36,7 +48,6 @@ function draw() {
     // create new drops
     if (drops.length < dropLimit && frameCount % 2 == 0) {
         drops.push(new Drop());
-        console.log(drops.length)
     }
 
     // iterate thru drops
@@ -54,13 +65,18 @@ function draw() {
             drops[i].radioactive = false;
         }
 
+        // update lerp state
+        drops[i].lerp();
         // move the drop
         drops[i].move();
         // show the drop
         drops[i].show();
     }
 
-    // noFill();
-    // ellipse(mouseX, mouseY, deflectRadius*2, deflectRadius*2);
+    // show pointer
+    for (var i = 0; i < wobblyPointers.length; i++) {
+        wobblyPointers[i].show();
+        wobblyPointers[i].shift();
+    }
 
 }
