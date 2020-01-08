@@ -1,0 +1,168 @@
+/* import fonts from front.css */
+@import url(./fonts.css);
+
+/* CSS variables */
+@import url(./partials/_variables.css);
+@import url(./partials/_global.css);
+
+/* start navigation */
+.header-area .main-menu .navbar .navbar-brand {
+    padding: 0 2rem 0 5rem;
+}
+
+.header-area .main-menu .navbar {
+    padding: 1rem 12rem;
+    border-bottom: 2px solid transparent;
+    border-color: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.header-area .main-menu .nav-item .nav-link {
+    font: normal 500 15px/2px var(--roboto);
+    text-transform: uppercase;
+    padding: 1rem;
+    color: var(--title-color);
+}
+
+.header-area .main-menu .navbar a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* end navigation */
+
+/* start p5js sketch */
+.site-main .p5js-sketch {
+    position: fixed;
+    border: none;
+    z-index: -3 !important;
+    width: 101%;
+    height: 100%;
+}
+
+/* end p5js sketch */
+
+/* start banner area */
+.site-main .site-banner {
+    /* background: url(./img/Paco-02.jpg) no-repeat; TODO */
+    background-position: 0% 50%;
+    padding: 4rem 8rem;
+}
+
+
+.site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+.site-main .site-banner .site-title h3::after{
+    content:"";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1 {
+    font-size: 5rem;
+}
+
+.site-main .site-banner .site-title h4 {
+    font-size: 1.5rem;
+}
+
+.site-main .site-banner .banner-image > img {
+    padding: 7rem 0;
+    width: 90rem;
+}
+
+.title-text {
+    font: normal bold 50px/72px var(--roboto);
+}
+
+/* end banner area */
+
+/* start about area */
+
+.site-main .about-area {
+    padding: 4rem 8rem;
+}
+.site-main .about-area .about-title h2 > span {
+    display: block;
+    font: normal bold 49px/60px var(--roboto);
+    letter-spacing: 21px;
+}
+
+.site-main .about-area .about-title .paragraph > p {
+    padding: 4rem 0;
+}
+
+/* end about area */
+
+/* start project area */
+
+.site-main .project-area {
+    padding: 4rem 8rem;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/90px var(--roboto);
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button+button::before{
+    content:"";
+    height: 1vw;
+    width: 1px;
+    background: black;
+    display: inline-flex;
+    transform: translateX(-2rem);
+}
+
+.site-main .project-area .button-group button+button{
+    padding: 0 2rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4 {
+    font: normal 700 25px/12px var(--roboto);
+}
+
+.site-main .project-area .grid img {
+    /* padding: 0.5rem; */
+    max-width:100%;
+    /* transition: filter .1s ease; */
+}
+
+.site-main .project-area .grid .our-project img:hover {
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+/* end project area */
+
+/* start footer area*/
+
+footer.footer-area {
+    padding: 2rem 0;
+    background-color: #BBBBBB;
+}
+
+footer.footer-area .social h5 {
+    font: normal 500 23px/30px var(--roboto);
+}
+
+footer.footer-area .social a > i{
+    font-size: 22px;
+    padding: 2rem;
+    color: black;
+}
+
+footer.footer-area .social a:hover > i{
+    color: var(--primary-color);
+}
+
+/* end footer area */

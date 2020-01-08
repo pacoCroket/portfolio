@@ -1,27 +1,262 @@
-<html>
-    <style type="text/css">
-        body {
-            overflow:hidden;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paco Croket</title>
 
-  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-    <style> body {padding: 0; margin: 0;} </style>
+    <!-- Bootstrap css, js and jQuery, isotope -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- <script scr="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script> -->
+
+    <!-- custom css file, font-awesome, google font -->
+    <script src="https://kit.fontawesome.com/83565b1be5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- p5.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
-    <script language="javascript" type="text/javascript" src="laser.js"></script>
-    <script language="javascript" type="text/javascript" src="ship.js"></script>
-    <script language="javascript" type="text/javascript" src="main.js"></script>
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
-
-  <!-- This line removes any default padding and style. 
-       You might only need one of these values set. -->
 
 </head>
-
 <body>
-        
+
+    <!-- ================ start header area ================ -->
+    <header class="header-area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="./img/spiral_36.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#site-banner">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-area">about</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">services</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project-area">projects</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">pages</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer-area">contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ================ end header area ================ -->
+
+    <!-- ================ start main area ================ -->
+    <main class="site-main" id="site-main">
+      
+      <!-- p5.js sketch for background -->
+      <!-- <div class="p5js-sketch" id="p5js-sketch"> -->
+        <!-- <iframe src="https://fmu93.github.io/p5js_sketch/bubble_gum/" alt="interactive sketch"></iframe> -->
+        <iframe src="https://fmu93.github.io/p5js_sketch/bubble_gum/" class="p5js-sketch" ></iframe>
+      <!-- </div> -->
+
+      <!-- start banner area -->
+      <section class="site-banner" id="site-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 site-title">
+              <h3 class="title-text">Hey there!</h3>
+              <h1 class="title-text text-uppercase">I am Paco Croket</h1>
+              <h4 class="title-text text-uppercase">Digital artist and entrepreneur</h4>
+              <div class="site-buttons">
+                <div class="d-flex row-flex flex-wrap">
+                  <button type="button" class="btn button primary-button mr-4 text-uppercase">See my CV</button>
+                  <button type="button" class="btn button secondary-button mr-4 text-uppercase">See my Blog</button>
+                   
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 banner-img">
+              <img src="./img/Paco-08_edit.jpg" alt="banner-img" class="img-fluid">
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end banner area -->
+
+      <!-- start about area -->
+      <section class="about-area" id="about-area">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="img">
+                <img src="./img/Paco-22.jpg" alt="About us" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 about-title">
+              <h2 class="text-uppercase pt-5">
+                <span>Let me</span>
+                <span>introduce</span>
+                <span>myself</span>
+              </h2>
+              <div class="paragraph py-4 w-75">
+                <p class="para">
+                  bla bla bla bla dsad asdfasf
+                </p>
+                <p class="para">
+                  fd sfsdfs dfsdfsdf
+                  sdfsdfs dfsdf
+                  sd fsdfs dfsdf
+                </p>
+              </div>
+              <button type="button" class="btn button primary-button text-uppercase">download cv</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end abount area -->
+
+      <!-- start project area -->
+
+      <section class="project-area" id="project-area">
+        <div class="container">
+          <div class="project-title pb-5">
+            <h1 class="text-uppercase title-h1">Recent projects</h1>
+            <h1 class="text-uppercase title-h1">Interactive digital art :)</h1>
+
+            <div class="button-group">
+              <button type="button"class="active">All</button>
+              <button type="button" data-filter=".leds">LEDs</button>
+              <button type="button" data-filter=".p5js">p5.js</button>
+              <button type="button" data-filter=".sound">Sound</button>
+              <button type="button" data-filter=".upcoming">Upcoming</button>
+            </div>
+
+            <div class="row grid">
+              <div class="col-lg-4 col-md-6 col sm-12 element-item leds">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-20.jpg" alt="portfolio-1">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Mosquito river</h4>
+                      <span class="text-secondary">LEDs, Portfolio</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col sm-12 element-item p5js">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-09.jpg" alt="portfolio-2">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Fairy Forest</h4>
+                      <span class="text-secondary">p5.js, Portfolio</span>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-4 col-md-6 col sm-12 element-item sound">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-20.jpg" alt="portfolio-3">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Music</h4>
+                      <span class="text-secondary">Sound, Portfolio</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col sm-12 element-item sound">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-20.jpg" alt="portfolio-4">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Live performance</h4>
+                      <span class="text-secondary">Sound, Portfolio</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col sm-12 element-item upcoming leds">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-09.jpg" alt="portfolio-5">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Rocket umbrella</h4>
+                      <span class="text-secondary">Upcoming, LEDs, Portfolio</span>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-4 col-md-6 col sm-12 element-item leds">
+                <div class="our-project">
+                  <div class="img">
+                    <img src="./img/Paco-20.jpg" alt="portfolio-6">
+                  </div>
+                  <div class="title py-4">
+                    <h4 class="text-uppercase">Spiral</h4>
+                      <span class="text-secondary">LEDs, Portfolio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end project area -->
+
+    </main>
+
+    <!-- ================ end main area ================ -->
+
+    <footer class="footer-area" id="footer-area">
+      <div class="container">
+        <div class="">
+          <div class="site-logo text-center py-4">
+            <a href="#" class=""><img src="./img/spiral_36.jpg" alt="logo" class=""></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase">Follow me</h5>
+            <a href="#" class=""><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pacocroket/" class=""><i class="fab fa-instagram"></i></a>
+            <a href="https://soundcloud.com/frank-croket" class=""><i class="fab fa-soundcloud"></i></a>
+            <a href="https://www.linkedin.com/in/francisco-paco-muro-006a7895/" class=""><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="copyright text-center">
+            <p class="para">
+              Copyright ©2020 All rights reserved | This website was made with help from
+              <a href="#"><span style="color: var(--primary-color);">Daily Tuition</span></a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- custom js scrip -->
+    <script src="./js/main.js"></script>    
+    <!-- <script language="javascript" type="text/javascript" src="./js/p5js/laser.js"></script>
+    <script language="javascript" type="text/javascript" src="./js/p5js/ship.js"></script>
+    <script language="javascript" type="text/javascript" src="./js/p5js/p5js-sketch.js"></script> -->
+    
 </body>
 </html>
