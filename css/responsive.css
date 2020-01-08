@@ -1,12 +1,5 @@
 /* if the viewport <= 340px  */
 @media only screen and (max-width: 340px){
-    .site-main .site-banner,
-    .site-main .about-area,
-    .site-main .project-area{
-        padding: 2%;
-        margin: 0%;
-    }
-
     .header-area .main-menu .navbar,
     .header-area .main-menu .navbar .navbar-brand {  
         border-color: none;
@@ -27,7 +20,15 @@
 
     .header-area .main-menu .navbar,
     .header-area .main-menu .navbar .navbar-brand {  
-        padding: 0%;
+        padding: 0%;        
+        margin: 0%;
+    }
+
+    .site-main .site-banner,
+    .site-main .about-area,
+    .site-main .project-area{
+        padding: 2%;
+        margin: 0%;
     }
 
     .site-main .about-area .about-title h2>span{

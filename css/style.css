@@ -76,7 +76,7 @@
 }
 
 .site-main .site-banner .banner-image > img {
-    padding: 7rem 0;
+    padding: 2rem 0;
     width: 90rem;
 }
 
@@ -106,35 +106,35 @@
 /* start project area */
 
 .site-main .project-area {
-    padding: 4rem 8rem;
+    padding: 4rem 4rem;
 }
 
 .site-main .project-area .button-group button{
     background: transparent;
     border: none;
-    font: normal 500 16px/90px var(--roboto);
+    font: normal 500 16px/50px var(--roboto);
     text-transform: uppercase;
 }
 
-.site-main .project-area .button-group button+button::before{
+/* .site-main .project-area .button-group button+button::before{
     content:"";
     height: 1vw;
     width: 1px;
     background: black;
     display: inline-flex;
     transform: translateX(-2rem);
-}
+} */
 
 .site-main .project-area .button-group button+button{
-    padding: 0 2rem;
+    padding: 0 0 0 2rem;
 }
 
 .site-main .project-area .grid .our-project > .title h4 {
-    font: normal 700 25px/12px var(--roboto);
+    font: normal 700 25px/22px var(--roboto);
 }
 
 .site-main .project-area .grid img {
-    /* padding: 0.5rem; */
+    padding: 0.2rem 0 0 0;
     max-width:100%;
     /* transition: filter .1s ease; */
 }
@@ -167,7 +167,8 @@ footer.footer-area .social a:hover > i{
 
 /* end footer area */
 
-/* GLOBAL */
+/* ======== GLOBAL =========== */
+
     /* Global classes */
 
     .title-text{
@@ -195,6 +196,7 @@ footer.footer-area .social a:hover > i{
         transition: background .6s ease;
         box-shadow: var(--box-shadow);
     }
+    
     .button.primary-button:hover {
         background: whitesmoke;
         background-clip: padding-box;
@@ -244,7 +246,7 @@ footer.footer-area .social a:hover > i{
     .navbar-fixed{
         position: fixed;
         width: 100%;
-        top: -1px;
+        top: -4px;
         left: 0; right: 0;
         background: whitesmoke;
         z-index: 999;
