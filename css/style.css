@@ -17,10 +17,14 @@
     box-shadow: var(--box-shadow);
 }
 
+.header-area .main-menu .navbar .navbar-nav{
+    padding-right: 10rem;
+}
+
 .header-area .main-menu .nav-item .nav-link {
-    font: normal 500 15px/2px var(--roboto);
+    font: normal 500 16px/12px var(--roboto);
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     color: var(--title-color);
 }
 
