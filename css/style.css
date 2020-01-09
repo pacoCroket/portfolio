@@ -168,8 +168,9 @@
 /* start footer area*/
 
 footer.footer-area {
-    padding: 2rem 0;
-    background-color: rgb(207, 207, 207);
+    margin-top: 22rem;
+    padding: 2rem 0;    
+    background: url(../img/footer-bg.png) no-repeat;
 }
 
 footer.footer-area .social h5 {
@@ -302,9 +303,6 @@ footer.footer-area .social a:hover > i{
     html, body {
         margin: 0%;
         box-sizing: border-box;
-        /* width: 100%;
-        height: 100%;    
-        max-width: 100%; */
         overflow-x: hidden;
     }
     
