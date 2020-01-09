@@ -12,7 +12,7 @@
 
 .header-area .main-menu .navbar {
     padding: 1rem 12rem;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
     border-color: var(--border-color);
     box-shadow: var(--box-shadow);
 }
@@ -94,8 +94,11 @@
 }
 
 .site-main .site-banner .banner-image > img {
-    padding: 2rem 0;
-    width: 90rem;
+    padding: 2rem 1rem;
+    width: 100rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .title-text {
@@ -196,6 +199,9 @@ footer.footer-area .social a:hover > i{
     .text-uppercase {
         text-transform: uppercase;
     }
+
+    /* Images */
+
     
     /* Buttons */
     
