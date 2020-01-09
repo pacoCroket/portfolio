@@ -5,6 +5,7 @@ $(document).ready(function(){
     // initialize isotope
     $('.project-area .grid').isotope({
         // options
+        itemSelector: '.element-item',
         layoutMode: 'fitRows'
       });
 
