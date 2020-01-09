@@ -2,16 +2,17 @@
 class Drop {
     constructor(){
         this.pos = createVector(random(width), 0);
-        this._vel = createVector(0, random(2,5));
+        this.alpha = random(30, 210);
+        this._vel = createVector(0, map(this.alpha, 30, 220, 2, 5));
         this.vel = this._vel;
-        // this.speed = random(2,4);
-        this._color = color(30, random(220));
+        this._color = color(0, this.alpha);
         this.color = this._color;
-        this._weight = map(this._vel.y, 2, 5, 10, 1);
+        this._weight = random(10, 1); //map(this._vel.y, 2, 5, 10, 1);
         this.weight = this._weight;
         this.radioactive = false;
         this.radioactiveColor = random([primaryColor, primaryColor2]);
         this.lerpAmt = 0;
+        this.lerpAmtRate = lerpAmtRate*map(this._weight, 10, 1, 1/1.5, 1.5);
     }
 
     defeflect(toVector){
@@ -36,15 +37,20 @@ class Drop {
 
     lerp() {
         if (!this.radioactive) {           
-            this.lerpAmt -= lerpAmtRate;
+            this.lerpAmt -= this.lerpAmtRate;
         } else {
-            this.lerpAmt += lerpAmtRate;            
+            this.lerpAmt += this.lerpAmtRate;            
         }
         this.lerpAmt = constrain(this.lerpAmt, 0, 1);
 
         this.color = lerpColor(this._color, this.radioactiveColor, this.lerpAmt);
         this.vel = p5.Vector.lerp(this._vel, p5.Vector.mult(this._vel, 0.25), this.lerpAmt);
         this.weight = lerp(this._weight, pow(this._weight, 1.5), this.lerpAmt);
+    }
+
+    parallaxShift(shiftVector) {
+        shiftVector.mult(map(this.vel.y, 2, 5, 2, 0));
+        this.pos.add(shiftVector);
     }
 }
 

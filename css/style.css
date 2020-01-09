@@ -29,6 +29,7 @@
 }
 
 .header-area .main-menu .navbar a:hover{
+    font: normal 700 20px/12px var(--roboto);
     background: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -168,7 +169,7 @@
 /* start footer area*/
 
 footer.footer-area {
-    margin-top: 22rem;
+    margin-top: 24rem;
     padding: 2rem 0;    
     background: url(../img/footer-bg.png) no-repeat;
 }
@@ -291,6 +292,10 @@ footer.footer-area .social a:hover > i{
         z-index: 999;
         transition: background .5s ease;
     }
+
+    .container {
+        max-width: 79%;
+    }
     
     /* section {
         background-size: 7vw;
@@ -309,14 +314,14 @@ footer.footer-area .social a:hover > i{
     /* CSS variables */
     
     :root{
-        --primary-color: rgb(50, 40, 187);
-        --primary-color2: #33c0a9;
+        --primary-color: #3D17A5;
+        --primary-color2: #0CCE80;
         --title-color: #141313;
-        --text-color: #111111;  
+        --text-color: #1C1C1C;  
         --border-color: #201f1f17;  
-        --gradient-color: linear-gradient(90deg, #38ad94 0%, #2623b1 100%);
+        --gradient-color: linear-gradient(90deg, #0CCE80 0%, #3D17A5 100%);
         --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
-        --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+        --box-shadow: 0px 10px 30px '#272D2D44';
         --swimlane-unpadded-color: linear-gradient(90deg, #ffffff00 0%, #ffffffb0 12%, #ecececf1 50%, #ffffffb0 88%, #ffffff00 100%);
         --swimlane-color: linear-gradient(90deg, #ffffff00 0%, #ffffffb0 20%, #ecececf1 50%, #ffffffb0 80%, #ffffff00 100%);
        

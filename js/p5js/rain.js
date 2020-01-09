@@ -25,6 +25,7 @@ function setup(){
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.parent("p5js-sketch");
+    // select('body').mouseWheel(parallaxDrops);
     toggleBtn = select('#animationToggle');
     toggleBtn.mousePressed(toggleAnimation);
     
@@ -32,10 +33,10 @@ function setup(){
     deflectRadius = windowHeight*0.2;
     dropLimit = width/15;
     
-    primaryColor = color(50, 40, 187);
-    primaryColor2 = color('#33c0a9');
-    primaryColorFaded = color(50, 40, 187, 50);
-    primaryColor2Faded = color('#33c0a944');
+    primaryColor = color('#3D17A5');
+    primaryColor2 = color('#0CCE80');
+    primaryColorFaded = color('#3D17A544');
+    primaryColor2Faded = color('#0CCE8044');
 
     for (var i = 0; i < pointers; i++) {
         wobblyPointers.push(new WobblyPointer());
@@ -101,4 +102,13 @@ function resetElements() {
     for (var i = 0; i < pointers; i++) {
         wobblyPointers.push(new WobblyPointer());
     }
+}
+
+function parallaxDrops(event) {
+    var scrollShift = createVector(event.deltaX, event.deltaY).mult(0.005);
+    // iterate thru drops
+    for (var i = drops.length-1; i >= 0; i--) {
+        drops[i].parallaxShift(scrollShift);
+    }
+
 }

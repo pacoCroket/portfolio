@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    let nav_offset_top = $('.header-area').height();
-
     // initialize isotope
     $('.project-area .grid').isotope({
         // options
@@ -21,6 +19,8 @@ $(document).ready(function(){
         })
         return false;
     });
+
+    // let nav_offset_top = $('.header-area').height();
 
     // // don't show p5.js if device is smaller than 600px width
     // if($(window).width() < 600) {
@@ -48,11 +48,11 @@ $(document).ready(function(){
 
     // $('.site-main .p5js-sketch').attr('height', nav_offset_top-150);
 
-    document.addEventListener("keydown", function (e) {
-        if([37,38,39,40].indexOf(e.keyCode) > -1){
-        e.preventDefault();
-        // Do whatever else you want with the keydown event (i.e. your navigation).
-        }
-    }, false);
+    // document.addEventListener("keydown", function (e) {
+    //     if([37,38,39,40].indexOf(e.keyCode) > -1){
+    //     e.preventDefault();
+    //     // Do whatever else you want with the keydown event (i.e. your navigation).
+    //     }
+    // }, false);
 
 });
