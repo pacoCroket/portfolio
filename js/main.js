@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.project-area .grid').isotope({
         // options
         itemSelector: '.element-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'masonry'
       });
 
     let $btns = $('.project-area .button-group button');

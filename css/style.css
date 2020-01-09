@@ -155,10 +155,17 @@
     font: normal 700 25px/22px var(--roboto);
 }
 
+.site-main .project-area .grid .our-project > .title  {
+    padding: 1rem 0;
+}
+
 .site-main .project-area .grid img {
-    padding: 0.2rem 0 0 0;
     max-width:100%;
     /* transition: filter .1s ease; */
+}
+
+.site-main .project-area .grid .img {
+    padding: 1rem 0;
 }
 
 .site-main .project-area .grid .our-project img:hover {
