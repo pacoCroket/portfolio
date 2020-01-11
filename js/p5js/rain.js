@@ -24,7 +24,7 @@ function windowResized() {
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
-    canvas.parent("p5js-sketch");
+    canvas.parent("rain-sketch");
     // select('body').mouseWheel(parallaxDrops);
     toggleBtn = select('#animationToggle');
     toggleBtn.mousePressed(toggleAnimation);

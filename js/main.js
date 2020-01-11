@@ -2,6 +2,8 @@ $(document).ready(function(){
 
     $("#header").load("header.html"); 
     $("#footer").load("footer.html"); 
+    $("#rain-sketch").load("rain-sketch.html"); 
+
 
     // initialize isotope
     $('.project-area .grid').isotope({
