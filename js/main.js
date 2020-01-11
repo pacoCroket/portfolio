@@ -2,7 +2,6 @@ $(document).ready(function(){
 
     $("#header").load("header.html"); 
     $("#footer").load("footer.html"); 
-    $("#rain-sketch").load("rain-sketch.html"); 
 
 
     // initialize isotope
@@ -60,4 +59,8 @@ $(document).ready(function(){
     //     }
     // }, false);
 
+});
+
+$(header).ready(function(){
+    $("#rain-sketch").load("rain-sketch.html"); 
 });
