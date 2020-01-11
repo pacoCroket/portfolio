@@ -9,7 +9,10 @@
     <!-- Bootstrap css, js and jQuery, isotope -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -29,50 +32,8 @@
 <body>
 
     <!-- ================ start header area ================ -->
-    <header class="header-area">
-      <div class="main-menu navbar-fixed">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="./img/spiral_36.jpg" alt="logo" class="rounded"></a>
-            
-            <button type="button" class="btn button secondary-button button-small mr-auto text-uppercase" id="animationToggle">
-              Animation toggle
-            </button>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="mr-auto"></div>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#site-banner">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-area">about</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">services</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project-area">projects</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">pages</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer-area">contact</a>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-      </div>
-    </header>
+    
+  <div id="header"></div>
     <!-- ================ end header area ================ -->
 
     <!-- ================ start main area ================ -->
@@ -91,10 +52,14 @@
               <h1 class="title-text text-uppercase">I am Paco Croket</h1>
               <h4 class="title-text text-uppercase">Digital artist, aerospace engineer, programmer, agile enthusiast and entrepreneur</h4>
               <div class="site-buttons">
-                <div class="d-flex row-flex flex-wrap">
-                  <button type="button" class="btn button primary-button mr-4 text-uppercase">See my CV</button>
-                  <button type="button" class="btn button secondary-button mr-4 text-uppercase">See my Blog</button>
-                   
+              <div class="d-flex row-flex flex-wrap">
+                  
+              <a href="/res/Francisco Muro CV_english_19Q4.pdf" target="_blank" rel="noopener noreferrer" class="">
+                <button type="button" class="btn button primary-button mr-4 text-uppercase">See my CV</button>
+              </a>   
+              <a href="https://www.instagram.com/pacocroket/" target="_blank" rel="noopener noreferrer" class=""></a>
+                <button type="button" class="btn button secondary-button mr-4 text-uppercase">See my Blog</button>
+              </a>
                 </div>
               </div>
             </div>
@@ -133,7 +98,9 @@
                   Now I have found a place to grow some roots in, Cologne, Germany. Here I plan to capitalize on my skills and become an entrepreneur, while always learning more and letting myself be surprised.
                 </p>
               </div>
-              <button type="button" class="btn button primary-button text-uppercase">download cv</button>
+              <a href="/res/Francisco Muro CV_english_19Q4.pdf" target="_blank" rel="noopener noreferrer" class="">
+                <button type="button" class="btn button primary-button text-uppercase"><i class="fa fa-download"></i>  download cv</button>
+              </a>
             </div>
           </div>
         </div>
@@ -173,12 +140,16 @@
 
               <div class="col-lg-4 col-md-6 col sm-12 element-item leds">
                 <div class="our-project">
-                  <div class="img">
-                    <img src="./img/portfolio/eggs/1-egg.jpg" alt="portfolio-1">
-                  </div>
+                    <nav>
+                    <div class="img">
+                      <a href="post.html">
+                        <img src="./img/portfolio/eggs/1-egg.jpg" alt="portfolio-1">
+                      </a>
+                    </div>
+                  </nav>
                   <div class="title">
                     <h4 class="text-uppercase">Zebrazoid eggs</h4>
-                      <span class="text-secondary">LEDs, Portfolio</span>
+                    <span class="text-secondary">LEDs, Portfolio</span>
                   </div>
                 </div>
               </div>
@@ -281,36 +252,10 @@
 
     <!-- ================ end main area ================ -->
 
-    <footer class="footer-area" id="footer-area">
-      <div class="container">
-        <div class="">
-          <div class="site-logo text-center">
-            <a href="#" class=""><img src="./img/spiral_36.jpg" alt="logo" class="rounded"></a>
-          </div>
-          <div class="social text-center py-2">
-            <h5 class="text-uppercase py-2">Follow me</h5>
-            <!-- <a href="#" class=""><i class="fab fa-facebook"></i></a> -->
-            <a href="https://www.instagram.com/pacocroket/" class=""><i class="fab fa-instagram"></i></a>
-            <a href="https://soundcloud.com/frank-croket" class=""><i class="fab fa-soundcloud"></i></a>
-            <a href="https://github.com/pacoCroket" class=""><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/francisco-paco-muro-006a7895/" class=""><i class="fab fa-linkedin"></i></a>
-          </div>
-          <div class="copyright text-center">
-            <p class="para">
-              Copyright ©2020 All rights reserved | This website was made with help from
-              <a href="#"><span style="color: var(--primary-color);">Daily Tuition</span></a>
-          </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
 
     <!-- custom js scrip -->
-    <script src="./js/main.js"></script>    
-    <!-- <script language="javascript" type="text/javascript" src="./js/p5js/laser.js"></script>
-    <script language="javascript" type="text/javascript" src="./js/p5js/ship.js"></script>
-    <script language="javascript" type="text/javascript" src="./js/p5js/p5js-sketch.js"></script> -->
-    
+    <script src="./js/main.js"></script>       
     <script language="javascript" type="text/javascript" src="./js/p5js/drop.js"></script>
     <script language="javascript" type="text/javascript" src="./js/p5js/rain.js"></script>
     

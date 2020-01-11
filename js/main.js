@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+
     // initialize isotope
     $('.project-area .grid').isotope({
         // options

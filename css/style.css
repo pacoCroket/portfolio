@@ -176,7 +176,7 @@
 /* start footer area*/
 
 footer.footer-area {
-    margin-top: 24rem;
+    margin-top: 28rem;
     padding: 2rem 0;    
     background: url(../img/footer-bg.png) no-repeat;
 }
@@ -186,7 +186,7 @@ footer.footer-area .social h5 {
 }
 
 footer.footer-area .social a > i{
-    font-size: 22px;
+    font-size: 30px;
     padding: 2rem;
     color: black;
 }
@@ -237,7 +237,7 @@ footer.footer-area .social a:hover > i{
     }
     
     .button.primary-button:hover {
-        background: whitesmoke;
+        background: white;
         background-clip: padding-box;
         color: black;
     }
