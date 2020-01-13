@@ -31,7 +31,7 @@
     .site-main .site-banner,
     .site-main .about-area,
     .site-main .project-area{
-        padding: 2%;
+        padding: 10% 2%;
         margin: 0%;
     }
 
@@ -69,7 +69,7 @@
 
     .site-main .banner-area,
     .site-main .about-area {
-        padding: 3% 4%;
+        padding: 6% 4%;
     }
 
 

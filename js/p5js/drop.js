@@ -32,14 +32,14 @@ class Drop {
     show() {
         stroke(this.color);
         strokeWeight(this.weight);
-        line(this.pos.x, this.pos.y, this.pos.x-this.vel.x*this.vel.x, this.pos.y-this.vel.y*this.vel.y*2);
+        line(this.pos.x, this.pos.y, this.pos.x+this.vel.x*this.vel.x, this.pos.y+this.vel.y*this.vel.y*2);
     }
 
     lerp() {
         if (!this.radioactive) {           
-            this.lerpAmt -= this.lerpAmtRate;
+            this.lerpAmt -= this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);
         } else {
-            this.lerpAmt += this.lerpAmtRate;            
+            this.lerpAmt += this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);            
         }
         this.lerpAmt = constrain(this.lerpAmt, 0, 1);
 
