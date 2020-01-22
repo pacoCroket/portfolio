@@ -77,13 +77,17 @@ canvas {
 .site-main .site-banner {
     /* background: url(./img/Paco-02.jpg) no-repeat; TODO */
     background-position: 0% 50%;
-    padding: 6rem 4rem;
+    padding: 4rem 4rem;
+}
+
+.site-main .site-banner .site-title {
+    padding: 0 1.5rem;
 }
 
 
 .site-main .site-banner .site-title h3{
-    padding-top: 20%;
-    font-weight: 300;
+    padding-top: 20%;    
+    font: normal 100 2rem/3rem var(--roboto);
 }
 
 /* .site-main .site-banner .site-title h3::after{
@@ -102,7 +106,7 @@ canvas {
 
 .site-main .site-banner .site-title h4 {    
     font: normal bold 1.6rem/3rem var(--roboto);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 1rem 0rem
 }
 
@@ -286,7 +290,7 @@ footer.footer-area .social a:hover > i{
         font: normal 500 18px/25px var(--roboto);
     }
 
-    p.para.justify {        
+    .justify {        
         text-align: justify;
     }
     

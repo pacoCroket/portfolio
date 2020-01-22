@@ -21,33 +21,41 @@ $(document).ready(function(){
         $('.project-area .grid').isotope({
             filter: selector
         })
-        return false;
+        return true;
     });
 
     // only show navbar when scrolling up
-
+    var previousScrollTime = 0;
     var previousScroll = 0;
 
-        // fade in .navbar
-        $(function () {
-            $(window).scroll(function () {
-                
-                var currentScroll = $(this).scrollTop();
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+            
+            var currentScroll = $(this).scrollTop();
 
-                if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()){
- 
-                    if (currentScroll > previousScroll){
-                        $('.main-menu').fadeOut(700);
-                    } else {
-                        $('.main-menu').fadeIn();
-                    }
+            if (currentScroll > 100){
+
+                if (currentScroll > previousScroll){
+                    $('.main-menu').fadeOut(700);
                 } else {
                     $('.main-menu').fadeIn();
                 }
-                
-                previousScroll = currentScroll;
-            });
+            } else {
+                $('.main-menu').fadeIn();
+            }
+            
+            previousScroll = currentScroll;
+            previousScrollTime = millis();
         });
+    });
+
+            
+    setInterval(function() {
+        if (millis() - previousScrollTime > 4000) {
+            $('.main-menu').fadeIn(1500);
+        }
+      }, 250);
  
 
 });
