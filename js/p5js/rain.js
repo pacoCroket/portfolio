@@ -3,7 +3,7 @@ var drops = [];
 var dropLimit;
 var deflectRadius;
 var mousePos;
-var lerpAmtRate = 0.018;
+var lerpAmtRate = 0.04;
 var wobblyPointers = [];
 var pointers = 4;
 var toggleBtn;
@@ -24,7 +24,7 @@ function windowResized() {
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
-    canvas.parent("rain-sketch");
+    canvas.parent("#rain-sketch");
     // select('body').mouseWheel(parallaxDrops);
     toggleBtn = select('#animationToggle');
     toggleBtn.mousePressed(toggleAnimation);

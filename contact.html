@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Paco Croket - Project</title>
+        
+    <!-- Bootstrap css, js and jQuery, isotope -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- <script scr="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script> -->
+
+    <!-- custom css file, font-awesome, google font -->
+    <script src="https://kit.fontawesome.com/83565b1be5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="header"></div>
+        
+        <main class="site-main">
+            <!-- p5.js sketch for background -->
+            <div class="p5js-sketch" id='rain-sketch'></div>
+            <div class="swimlane"></div>
+
+            <!-- start about area -->
+            <section class="site-banner" id="site-banner">
+                <div class="container-fluid pt-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="img">
+                            <img src="./img/textures/texture-sunset.jpg" alt="About us" class="img-fluid rounded mx-auto d-block px-5">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-title">
+                    <h2 class="text-uppercase pt-5">
+                        <span>Contact </span>
+                    </h2>
+                    <div class="paragraph py-4">
+                        <p class="para justify">
+                        For collaborations, comission works or just saying hi, please reach me on my instagram or email.
+                        </p>
+                        <p class="para justify">
+                        As this project develops further, a catalogue and online shop will be made available. Until then, you can address specific installations or works in your messsage.
+                        </p>
+                    </div>
+                    <a href="https://www.instagram.com/pacocroket/" target="_blank" rel="noopener noreferrer" class="">
+                        <button type="button" class="btn button primary-button mx-4 text-uppercase"><i class="fab fa-instagram"></i>  instagram</button>
+                    </a>
+                    
+                    <a href="mailto:croketproduction@gmail.com" target="_blank" rel="noopener noreferrer" class="">
+                        <button type="button" class="btn button primary-button mx-4 text-uppercase"><i class="fas fa-envelope-open-text"></i>  email me</button>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <!-- end abount area -->
+
+        </main>
+
+        <div id="footer"></div>
+
+        <!-- custom js scrip -->
+        <script src="./js/main.js"></script>           
+      
+    </body>
+</html>

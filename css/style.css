@@ -35,6 +35,13 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.header-area .main-menu .navbar-scroll {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
 
 /* end navigation */
 
@@ -45,6 +52,10 @@
     z-index: -3 !important;
     width: 101%;
     height: 100%;
+}
+
+canvas {
+    display: block;
 }
 
 .site-main .swimlane {
@@ -72,10 +83,10 @@
 
 .site-main .site-banner .site-title h3{
     padding-top: 20%;
-    font-weight: 500;
+    font-weight: 300;
 }
 
-.site-main .site-banner .site-title h3::after{
+/* .site-main .site-banner .site-title h3::after{
     content:"";
     height: 2px;
     width: 18vw;
@@ -83,14 +94,14 @@
     display: inline-block;
     margin-left: 5%;
     transform: translateY(-10px);
-}
+} */
 
 .site-main .site-banner .site-title h1 {
     font-size: 5rem;
 }
 
 .site-main .site-banner .site-title h4 {    
-    font: normal bold 1.8rem/3rem var(--roboto);
+    font: normal bold 1.6rem/3rem var(--roboto);
     letter-spacing: 2px;
     padding: 1rem 0rem
 }
@@ -221,7 +232,7 @@ footer.footer-area .social a:hover > i{
         font: normal 500 16px/20px var(--roboto);
         position: relative;
         border: 3px solid transparent;
-        border-radius: 8px;
+        border-radius: 10px;
     }
 
     .button-small {
@@ -241,7 +252,7 @@ footer.footer-area .social a:hover > i{
     .button.primary-button:hover {
         background: white;
         background-clip: padding-box;
-        color: black;
+        color: black
     }
     
     .button.primary-button::after, button.secondary-button::after {
@@ -331,8 +342,10 @@ footer.footer-area .social a:hover > i{
         --gradient-color: linear-gradient(90deg, #0CCE80 0%, #3D17A5 100%);
         --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
         --box-shadow: 0px 10px 30px '#272D2D44';
-        --swimlane-unpadded-color: linear-gradient(90deg, #ffffff00 0%, #ffffffb0 12%, #ecececf1 50%, #ffffffb0 88%, #ffffff00 100%);
-        --swimlane-color: linear-gradient(90deg, #ffffff00 0%, #ffffffb0 20%, #ecececf1 50%, #ffffffb0 80%, #ffffff00 100%);
+        --mid-background: #ddddddf5;
+        --side-background: #ffffffb0; 
+        --swimlane-unpadded-color: linear-gradient(90deg, #ffffff00 0%, var(--side-background) 12%, var(--mid-background) 50%, var(--side-background) 88%, #ffffff00 100%);
+        --swimlane-color: linear-gradient(90deg, #ffffff00 0%, var(--side-background) 20%, var(--mid-background) 50%, var(--side-background) 80%, #ffffff00 100%);
        
     
         /* font family variables. */ 

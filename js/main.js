@@ -24,43 +24,34 @@ $(document).ready(function(){
         return false;
     });
 
-    // let nav_offset_top = $('.header-area').height();
+    // only show navbar when scrolling up
 
-    // // don't show p5.js if device is smaller than 600px width
-    // if($(window).width() < 600) {
-    //     $("#p5js-sketch").remove();
-    // } else {
-    //     // setHeight($(window).width()-nav_offset_top)
-    // }
+    var previousScroll = 0;
 
-    // sticky navigation menu
+        // fade in .navbar
+        $(function () {
+            $(window).scroll(function () {
+                
+                var currentScroll = $(this).scrollTop();
 
-    // function navbarFixed() {
-    //     if ($('.header-area').length) {
-    //         $(window).scroll(function() {
-    //             let scroll = $(window).scrollTop();
-    //             if (scroll >= nav_offset_top+50) {
-    //                 $('.header-area .main-menu').addClass('navbar-fixed');
-    //             } else {
-    //                 $('.header-area .main-menu').removeClass('navbar-fixed');
-    //             }
-    //         });
-    //     }
-    // }
-
-    // navbarFixed();
-
-    // $('.site-main .p5js-sketch').attr('height', nav_offset_top-150);
-
-    // document.addEventListener("keydown", function (e) {
-    //     if([37,38,39,40].indexOf(e.keyCode) > -1){
-    //     e.preventDefault();
-    //     // Do whatever else you want with the keydown event (i.e. your navigation).
-    //     }
-    // }, false);
+                if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()){
+ 
+                    if (currentScroll > previousScroll){
+                        $('.main-menu').fadeOut(700);
+                    } else {
+                        $('.main-menu').fadeIn();
+                    }
+                } else {
+                    $('.main-menu').fadeIn();
+                }
+                
+                previousScroll = currentScroll;
+            });
+        });
+ 
 
 });
 
-$(header).ready(function(){
+$('#animationToggle').ready(function(){
     $("#rain-sketch").load("rain-sketch.html"); 
 });

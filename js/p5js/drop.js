@@ -3,7 +3,7 @@ class Drop {
     constructor(){
         this.pos = createVector(random(width), 0);
         this.alpha = random(30, 210);
-        this._vel = createVector(0, map(this.alpha, 30, 220, 2, 5));
+        this._vel = createVector(0, map(this.alpha, 30, 220, 0.5, 3.5));
         this.vel = this._vel;
         this._color = color(0, this.alpha);
         this.color = this._color;
@@ -32,16 +32,25 @@ class Drop {
     show() {
         stroke(this.color);
         strokeWeight(this.weight);
-        line(this.pos.x, this.pos.y, this.pos.x+this.vel.x*this.vel.x, this.pos.y+this.vel.y*this.vel.y*2);
+        push();
+        beginShape();
+        translate(this.pos.x, this.pos.y);
+        vertex(-this.vel.x/2, -this.vel.y*this.vel.y);
+        vertex(this.vel.x/2, this.vel.y*this.vel.y);
+        endShape();
+        pop();
+        // line(this.pos.x, this.pos.y, this.pos.x+this.vel.x*this.vel.x, this.pos.y+this.vel.y*this.vel.y*2);
     }
 
     lerp() {
-        if (!this.radioactive) {           
-            this.lerpAmt -= this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);
+        if (this.radioactive) {           
+            // this.lerpAmt -= this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);
+            this.lerpAmt = lerp(this.lerpAmt, 1, this.lerpAmtRate);
         } else {
-            this.lerpAmt += this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);            
+            // this.lerpAmt += this.lerpAmtRate*map(this.lerpAmt, 0, 1, 2, 0.5);
+            this.lerpAmt = lerp(this.lerpAmt, 0, this.lerpAmtRate*1.5);
         }
-        this.lerpAmt = constrain(this.lerpAmt, 0, 1);
+        // this.lerpAmt = constrain(this.lerpAmt, 0, 1);
 
         this.color = lerpColor(this._color, this.radioactiveColor, this.lerpAmt);
         this.vel = p5.Vector.lerp(this._vel, p5.Vector.mult(this._vel, 0.25), this.lerpAmt);
