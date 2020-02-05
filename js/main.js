@@ -46,16 +46,16 @@ $(document).ready(function(){
             }
             
             previousScroll = currentScroll;
-            previousScrollTime = millis();
+            previousScrollTime = new Date().getSeconds();
         });
     });
 
             
     setInterval(function() {
-        if (millis() - previousScrollTime > 4000) {
+        if (new Date().getSeconds() - previousScrollTime > 10) {
             $('.main-menu').fadeIn(1500);
         }
-      }, 250);
+      }, 500);
  
 
 });
