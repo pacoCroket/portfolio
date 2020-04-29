@@ -327,6 +327,11 @@ btn.active {
   margin: 2rem 6rem;
 }
 
+.grid-vid {
+  width: 100%;
+  height: 100%;
+}
+
 /* section {
         background-size: 7vw;
         background-clip: padding-box;
