@@ -76,12 +76,26 @@ canvas {
 /* start banner area */
 .site-main .site-banner {
   /* background: url(./img/Paco-02.jpg) no-repeat; TODO */
-  background-position: 0% 50%;
+  /* background-position: 0% 50%; */
   padding: 4rem 4rem;
+  min-height: 100vh;
 }
 
 .site-main .site-banner .site-title {
   padding: 0 1.5rem;
+}
+
+.site-main .site-banner .site-title h1 {
+  padding-top: 20%;
+  font: normal 500 6rem var(--roboto);
+}
+
+.site-main .site-banner .site-title h2 {
+  font: normal 600 2.5rem/3rem var(--roboto);
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .site-main .site-banner .site-title h3 {
@@ -98,10 +112,6 @@ canvas {
     margin-left: 5%;
     transform: translateY(-10px);
 } */
-
-.site-main .site-banner .site-title h1 {
-  font-size: 5rem;
-}
 
 .site-main .site-banner .site-title h4 {
   font: normal bold 1.6rem/3rem var(--roboto);
@@ -320,7 +330,7 @@ btn.active {
 }
 
 .container {
-  max-width: 79%;
+  width: 85%;
 }
 
 .container2 {

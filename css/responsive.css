@@ -6,19 +6,26 @@
     box-shadow: none;
   }
 
-  .site-main .site-banner .site-title h1 {
+  /* .site-main .site-banner .site-title h1 {
     font-size: 41px;
   }
 
   .site-main .about-area .about-title h2 > span {
     font-size: 14px;
-  }
+  } */
 }
 
 /* if the viewport <= 792px  */
 @media only screen and (max-width: 792px) {
   .container2 {
     margin: 1rem;
+  }
+
+  .container {
+    margin: 0;
+    margin-top: 4rem;
+    padding: 0;
+    width: 100%;
   }
 
   .site-main .swimlane {
@@ -64,10 +71,6 @@
 @media only screen and (max-width: 1910px) {
   .header-area .main-menu .navbar {
     padding: 1rem;
-  }
-
-  .container {
-    max-width: 90%;
   }
 
   .site-main .banner-area,
